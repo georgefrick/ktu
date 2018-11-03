@@ -48,6 +48,19 @@ a knowledge transfer site - I share what I learn in very brief notes.
 * Package is saved in `src/github.com/georgefrick/ktu` directory.
 * `import gitgub.com/georgefrick/ktu`
 
+## Module Support (Go 1.10+)
+* **go mod init github.com/georgefrick/ktu**
+* **go mod init mod** enables modules in your application.
+* **go mod tidy** remove old dependencies from go.mod.
+* Uses/creates a `go.mod` file, similar to package.json.
+* Uses/creates a `go.sum` file, similar to a package-lock.json
+* Go modules are versioned! (Semantic)
+* Go will fetch the latest tagged version available in a repository.
+* By default, module support is disabled within your $GOPATH.
+* **go get -u** to get the latest minor/patch release.
+* Go essentially treats major version releases as different packages!
 
 
+# References
+* [https://roberto.selbach.ca/intro-to-go-modules/]
 
