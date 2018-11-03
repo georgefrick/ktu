@@ -60,6 +60,8 @@ a knowledge transfer site - I share what I learn in very brief notes.
 * **go get -u** to get the latest minor/patch release.
 * Go essentially treats major version releases as different packages!
 
+## Cross Compile
+* **GOOS=linux go build -o main .**
 
 # References
 * [https://roberto.selbach.ca/intro-to-go-modules/]
