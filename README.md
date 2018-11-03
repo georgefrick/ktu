@@ -42,3 +42,12 @@ a knowledge transfer site - I share what I learn in very brief notes.
 
 ## Language
 * _ is very important to know, it lets you assign things to nothing
+
+## Third Party Packages
+* **go get -u github.com/georgefrick/ktu**
+* Package is saved in `src/github.com/georgefrick/ktu` directory.
+* `import gitgub.com/georgefrick/ktu`
+
+
+
+
