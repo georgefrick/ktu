@@ -1,71 +1,158 @@
-# ktu
-a knowledge transfer site - I share what I learn in very brief notes.
+<h1 id="ktu">ktu</h1>
 
-# GO 
+<p>a knowledge transfer site - I share what I learn in very brief notes.</p>
 
-## Commands
-* **go run** compiles and executes a program. 
-* **go install** compiles packages and creates binary executable files or package archive files.
+<h1 id="go">GO</h1>
 
-## Packages 
-* `package mypackage`
-* A package is a directory containing .go files.
-* If a program is part of main package, then go install will create a binary file.
-* If a program is not part of main package, a package archive file is created with go install command.
-* Go exports a variable if a variable name starts with Uppercase.
-* Variables not starting with an uppercase letter are private to the package.
-* You can nest packages.
+<h2 id="commands">Commands</h2>
 
-## Main Function
-* `func main()`
+<ul>
+    <li><strong>go run</strong> compiles and executes a program. </li>
 
-## Init Function
-* `func init()`
-* Init function is called by Go when a package is initialized.
-* Can have multiple init functions in a file or a package.
-* Order of the execution is according to the order of declaration.
-* If init functions accross a package, they are run in alphabetical file name order.
+    <li><strong>go install</strong> compiles packages and creates binary executable files or package archive files.</li>
+</ul>
 
-## Importing
-* `import "mypackage"`
-* `import (**alias** "mypackage" ...other imports on their own line)`
-* Go first searches for package directory inside GOROOT/src directory.
-* If not found in GOROOT/src, then it looks for GOPATH/src.
-* Reference nested packages by providing relative path to nested package.
-* an imported package is initialized only once per package
+<h2 id="packages">Packages</h2>
 
-## Variables
-* Top most scope is package scope.
-* You are not allowed to re-declare global variable with same name in the same package.
-* Variables must be declared and assigned in order.
-* **When variables are defined in package scope, they are declared in initialization cycles.**
+<ul>
+    <li><code>package mypackage</code></li>
 
-## Language
-* _ is very important to know, it lets you assign things to nothing
+    <li>A package is a directory containing .go files.</li>
 
-## Third Party Packages
-* **go get -u github.com/georgefrick/ktu**
-* Package is saved in `src/github.com/georgefrick/ktu` directory.
-* `import gitgub.com/georgefrick/ktu`
+    <li>If a program is part of main package, then go install will create a binary file.</li>
 
-## Module Support (Go 1.10+)
-* **go mod init github.com/georgefrick/ktu**
-* **go mod init mod** enables modules in your application.
-* **go mod tidy** remove old dependencies from go.mod.
-* Uses/creates a `go.mod` file, similar to package.json.
-* Uses/creates a `go.sum` file, similar to a package-lock.json
-* Go modules are versioned! (Semantic)
-* Go will fetch the latest tagged version available in a repository.
-* By default, module support is disabled within your $GOPATH.
-* **go get -u** to get the latest minor/patch release.
-* Go essentially treats major version releases as different packages!
+    <li>If a program is not part of main package, a package archive file is created with go install command.</li>
 
-## Cross Compile
-* **GOOS=linux go build -o main .**
+    <li>Go exports a variable if a variable name starts with Uppercase.</li>
 
-## Dockerizing
+    <li>Variables not starting with an uppercase letter are private to the package.</li>
+
+    <li>You can nest packages.</li>
+</ul>
+
+<h2 id="mainfunction">Main Function</h2>
+
+<ul>
+    <li><code>func main()</code></li>
+</ul>
+
+<h2 id="initfunction">Init Function</h2>
+
+<ul>
+    <li><code>func init()</code></li>
+
+    <li>Init function is called by Go when a package is initialized.</li>
+
+    <li>Can have multiple init functions in a file or a package.</li>
+
+    <li>Order of the execution is according to the order of declaration.</li>
+
+    <li>If init functions accross a package, they are run in alphabetical file name order.</li>
+</ul>
+
+<h2 id="importing">Importing</h2>
+
+<ul>
+    <li><code>import "mypackage"</code></li>
+
+    <li><code>import (**alias** "mypackage" ...other imports on their own line)</code></li>
+
+    <li>Go first searches for package directory inside GOROOT/src directory.</li>
+
+    <li>If not found in GOROOT/src, then it looks for GOPATH/src.</li>
+
+    <li>Reference nested packages by providing relative path to nested package.</li>
+
+    <li>an imported package is initialized only once per package</li>
+</ul>
+
+<h2 id="variables">Variables</h2>
+
+<ul>
+    <li>Top most scope is package scope.</li>
+
+    <li>You are not allowed to re-declare global variable with same name in the same package.</li>
+
+    <li>Variables must be declared and assigned in order.</li>
+
+    <li><strong>When variables are defined in package scope, they are declared in initialization cycles.</strong></li>
+</ul>
+
+<h2 id="language">Language</h2>
+
+<ul>
+    <li>_ is very important to know, it lets you assign things to nothing</li>
+</ul>
+
+<h2 id="thirdpartypackages">Third Party Packages</h2>
+
+<ul>
+    <li><strong>go get -u github.com/georgefrick/ktu</strong></li>
+
+    <li>Package is saved in <code>src/github.com/georgefrick/ktu</code> directory.</li>
+
+    <li><code>import gitgub.com/georgefrick/ktu</code></li>
+</ul>
+
+<h2 id="modulesupportgo110">Module Support (Go 1.10+)</h2>
+
+<ul>
+    <li><strong>go mod init github.com/georgefrick/ktu</strong></li>
+
+    <li><strong>go mod init mod</strong> enables modules in your application.</li>
+
+    <li><strong>go mod tidy</strong> remove old dependencies from go.mod.</li>
+
+    <li>Uses/creates a <code>go.mod</code> file, similar to package.json.</li>
+
+    <li>Uses/creates a <code>go.sum</code> file, similar to a package-lock.json</li>
+
+    <li>Go modules are versioned! (Semantic)</li>
+
+    <li>Go will fetch the latest tagged version available in a repository.</li>
+
+    <li>By default, module support is disabled within your $GOPATH.</li>
+
+    <li><strong>go get -u</strong> to get the latest minor/patch release.</li>
+
+    <li>Go essentially treats major version releases as different packages!</li>
+</ul>
+
+<h2 id="crosscompile">Cross Compile</h2>
+
+<ul>
+    <li><strong>GOOS=linux go build -o main .</strong></li>
+</ul>
+
+<h2 id="dockerizing">Dockerizing</h2>
+
+<ul>
+    <li>You can generally use <code>FROM scratch</code> with Go unless you have an exception case.</li>
+
+    <li>In your Dockerfile, you'll want CMD ["/app"] with the brackets so that it doesn't get run in a shell.</li>
+
+    <li>Step By Step
+    <ol>
+        <li>Compile your Go code: <code>go build -o example .</code></li>
+        <li>Create a Dockerfile, there is an example <a href="Dockerfile">here</a></li>
+        <li>Make sure your Dockerfile copies anything you need. In the example it copies the images folder over. </li>
+        <li>You may need to cross compile (deploy from Windows to Linux), with <code>GOOS=linux go build -o example</code></li>
+        <li>Build the image: <code>docker image build -t example:1 .</code></li>
+        <li>Test run the container: <code>docker container run --rm -P example:1</code></li>
+        <li>In Azure, make sure you have an existing, or create, a Docker Registry.</li>
+        <li>Login to the registry: <code>docker login myregistry.azurecr.io -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -p myPassword</code></li>
+        <li>Tag the image: <code>docker tag example:1 myregistry.azurecr.io/example:1</code></li>
+        <li>Push the image: <code>docker push myregistry.azurecr.io/example:1</code></li>
+        <li>You can now create a docker app service and pick this image to run it as an app service.</li>
+    </ol>
+    </li>
+</ul>
 
 
-# References
-* [https://roberto.selbach.ca/intro-to-go-modules/]
-* "How to Containerize Your Go Code" - Liz Rice (paperback)
+<h1 id="references">References</h1>
+
+<ul>
+    <li>[https://roberto.selbach.ca/intro-to-go-modules/]</li>
+    <li>[https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli]</li>
+    <li>"How to Containerize Your Go Code" - Liz Rice (paperback)</li>
+</ul>
