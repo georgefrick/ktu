@@ -63,6 +63,9 @@ a knowledge transfer site - I share what I learn in very brief notes.
 ## Cross Compile
 * **GOOS=linux go build -o main .**
 
+## Dockerizing
+
+
 # References
 * [https://roberto.selbach.ca/intro-to-go-modules/]
-
+* "How to Containerize Your Go Code" - Liz Rice (paperback)
