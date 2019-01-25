@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+<ol>
+<li>Open a power shell as administrator (win10 pro)</li>
+<li>Install-Module -Name AzureRM -AllowClobber</li>
+<li>OR if you can be admin: Install-Module -Name AzureRM -AllowClobber -Scope CurrentUser</li>
+<li>You won't be able to run it, lol</li>
+<li>Get-ExecutionPolicy</li>
+<li>Get-ExecutionPolicy -List</li>
+<li>Set-ExecutionPolicy Unrestricted -Scope CurrentUser</li>
+<li>That won't do it, you'll probably need to Import: Import-Module AzureRM</li>
+<li>Crap, you don't have a new enough .NET do you?</li>
+<li>Update your .NET - https://support.microsoft.com/en-us/help/4054531/microsoft-net-framework-4-7-2-web-installer-for-windows</li>
+<li>Ok, now sign In: Connect-AzAccount</li>
+<li>Reference: https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.0.0</li>
+<ol>
+</body>
+</html>
